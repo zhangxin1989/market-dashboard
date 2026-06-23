@@ -39,7 +39,7 @@ td { font-size:14px; border-bottom:1px solid #222; }
 <button class="active" onclick="setSpan(90)">3月</button>
 <button onclick="setSpan(9999)">全部</button>
 </div>
-<div class="chart-box" style="margin-bottom:15px"><h2>全景概览（左轴：收盘点位 · 右轴：指标%）</h2><div id="chart-overview" style="width:100%;height:450px"></div></div>
+<div class="chart-box" style="margin-bottom:15px"><h2>全景概览（左轴：收盘点位 · 右轴：指标%）</h2><div id="chart-overview" style="width:100%;height:520px"></div></div>
 <div class="chart-row">
 <div class="chart-box"><h2>PE分位趋势</h2><div id="chart-pe" class="chart"></div></div>
 <div class="chart-box"><h2>收盘点位趋势</h2><div id="chart-close" class="chart"></div></div>
@@ -118,9 +118,9 @@ ovSeries.push({name:'_thr',type:'line',yAxisIndex:1,data:DATA.dates.map(function
           {yAxis:30,lineStyle:{color:'rgba(34,197,94,0.35)'},label:{formatter:'30%',color:'#22c55e',fontSize:10}}]}});
 ovSel['_thr']=false;
 ov.setOption({
-  legend:{textStyle:{color:'#ccc',fontSize:11},top:0,type:'scroll',selected:ovSel},
+  legend:{textStyle:{color:'#ccc',fontSize:11},top:0,left:10,right:10,type:'plain',itemGap:10,selected:ovSel},
   tooltip:{trigger:'axis',axisPointer:{type:'cross'}},
-  grid:{left:65,right:65,top:45,bottom:50},
+  grid:{left:65,right:65,top:115,bottom:50},
   xAxis:{type:'category',data:DATA.dates,axisLabel:{color:'#888'},axisLine:{lineStyle:{color:'#333'}}},
   yAxis:[
     {type:'value',scale:true,name:'收盘',position:'left',splitLine:{lineStyle:{color:'#222'}},axisLabel:{color:'#888'}},
